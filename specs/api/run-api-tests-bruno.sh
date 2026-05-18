@@ -19,6 +19,6 @@ cd "$DIR/bruno"
 
 for folder in "${FOLDERS[@]}"; do
   echo ""
-  echo "--- bru run $folder ---"
-  bru run "$folder" --env local --env-var "host=$HOST"
+  echo "--- bun x @usebruno/cli run $folder ---"
+  bun x @usebruno/cli run "$folder" --env local --env-var "host=$HOST"
 done
