@@ -211,7 +211,9 @@ def build_dual_mode():
     traced asset (it lives in assets/media/ and is read here)."""
     lvb, lbody = _svg_inner(build(check=False))
     tvb, tbody = _svg_inner(open(os.path.join(MEDIA, "realworld-title-text.svg")).read())
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1669 284" width="1669" height="284">\n'
+    # crop the canvas to the content (logo+text span y62..221) + a ~16px even
+    # margin, so the banner has no dead vertical space. Logo/text y stay as set.
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 46 1669 191" width="1669" height="191">\n'
             f'  <svg x="42" y="37" width="210" height="210" viewBox="{lvb}">{lbody}</svg>\n'
             f'  <svg x="282" y="95.5" width="1352" height="114" viewBox="{tvb}">{tbody}</svg>\n'
             f'</svg>\n')
