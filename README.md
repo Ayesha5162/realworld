@@ -1,3 +1,4 @@
+## QA Testing Practice Project
 <br/><br/>
 
 ![RealWorld Example Applications](assets/media/realworld-dual-mode.svg)
